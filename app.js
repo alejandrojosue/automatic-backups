@@ -65,4 +65,4 @@ cron.schedule('0 2 * * 0', () => {
   });
 });
 
-console.log('Tarea de respaldo programada cada 2 minutos.');
+console.log('Tarea de respaldo semanal programada.');
