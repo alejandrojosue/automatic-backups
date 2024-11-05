@@ -1,0 +1,17 @@
+{
+  "name": "auto-backups",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "send": "node email.js"
+  },
+  "author": "Alejandro Díaz",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16"
+  }
+}
