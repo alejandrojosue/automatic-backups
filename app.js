@@ -65,4 +65,4 @@ cron.schedule('0 2 * * 0', () => {
   });
 });
 
-console.log('Tarea de respaldo semanal programada.');
+console.log('Tarea de respaldo semanal programada para el domingo a las 2:00 am.');
