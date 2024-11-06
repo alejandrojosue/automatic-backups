@@ -19,7 +19,7 @@ const ensureDirectoriesExist = () => {
 
 // Comando de respaldo
 const getBackupCommand = (timestamp) => {
-  return `docker exec container pg_dump -U alejandro --inserts templates_projects > ${backupDirectory}/ccilp-backup-${timestamp}.sql`;
+  return `docker exec container pg_dump -U alejandro --inserts db_prod > ${backupDirectory}/ccilp-backup-${timestamp}.sql`;
 };
 
 // Ruta del archivo de registro de errores
