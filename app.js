@@ -31,7 +31,7 @@ const getErrorLogPath = (timestamp) => {
 };
 
 // Programa la tarea para ejecutarse cada 2 minutos
-cron.schedule('0 2 * * 6', () => {
+cron.schedule('0 2 * * 0', () => {
   ensureDirectoriesExist(); // Verifica y crea los directorios si es necesario
   console.log('Iniciando respaldo de la base de datos...');
   
