@@ -5,6 +5,9 @@ import fs from 'fs';
 // Configuración del directorio de respaldos y errores
 const backupDirectory = './backups';
 const errorsDirectory = './errors';
+const containerName = 'postgres-prod'
+const databaseName = 'db_prod'
+const databaseUsername = 'alejandro'
 
 // Función para asegurarse de que los directorios existen
 const ensureDirectoriesExist = () => {
@@ -19,7 +22,7 @@ const ensureDirectoriesExist = () => {
 
 // Comando de respaldo
 const getBackupCommand = (timestamp) => {
-  return `docker exec container pg_dump -U alejandro --inserts db_prod > ${backupDirectory}/ccilp-backup-${timestamp}.sql`;
+  return `docker exec ${containerName} pg_dump -U ${databaseUsername} --inserts ${databaseName} > ${backupDirectory}/ccilp-backup-${timestamp}.sql`;
 };
 
 // Ruta del archivo de registro de errores
