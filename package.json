@@ -11,6 +11,7 @@
   "author": "Alejandro Díaz",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^17.3.1",
     "fs": "^0.0.1-security",
     "node-cron": "^3.0.3",
     "nodemailer": "^7.0.9"

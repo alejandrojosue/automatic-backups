@@ -2,6 +2,9 @@ import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 // Configuración del directorio de respaldos
 const backupDirectory = './backups';
 const errorLogPath = path.join(backupDirectory, 'error_log.txt');
@@ -17,8 +20,8 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
   auth: {
-    user: 'sistemaoperativoindependiente@gmail.com',
-    pass: 'biyvxblpoqqutson' // Asegúrate de usar un método seguro para manejar contraseñas
+    user: process.env.EMAIL,
+    pass: process.env.PASS_EMAIL // Asegúrate de usar un método seguro para manejar contraseñas
   }
 });
 
